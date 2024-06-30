@@ -4,7 +4,7 @@ Linear search, also called sequential search, is a simple algorithm that is used
 Each element of the list is sequentially searched until a match is found, or until the entire list is searched.
 Example: Given an array scaler[] with n elements, write a function to locate an element x within the array scaler[].
  */
-package array;
+package arrays;
 import java.io.*;
 import java.util.Scanner;
 

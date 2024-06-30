@@ -1,4 +1,4 @@
-package array;
+package arrays;
 
 // Bubble sort using java
 import java.io.*;
