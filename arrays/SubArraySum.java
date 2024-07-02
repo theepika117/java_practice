@@ -28,13 +28,12 @@ import java.util.List;
 
 public class SubArraySum {
 
-    static ArrayList<Integer> FindLargetSum(int arr[],int n)
+    static int FindLargetSum(int arr[],int n)
 
     {
         List<int[]> subArrays = new ArrayList<int[]>(); 
         int sum,maxSum =0,index=0;
         ArrayList<Integer> sumOfSubArray = new ArrayList<Integer>();
-        ArrayList<Integer> ans = new ArrayList<Integer>();
         for(int i = n-1; i >= 0; i--)
         {
             for(int start = 0; start < n-1; start++)
@@ -58,12 +57,8 @@ public class SubArraySum {
                 index = i;
             }
         }
-        ans.add(maxSum);
-        for(int num : subArrays.get(index))
-        {
-            ans.add(num);
-        }
-        return ans;
+        
+        return maxSum;
     }
 
     public static void main(String[] args) {
@@ -79,15 +74,23 @@ public class SubArraySum {
         {
             arr[i] = scr.nextInt();
         }
-        ArrayList<Integer> ans = new ArrayList<Integer>();
-        ans = FindLargetSum(arr, n);
-        System.out.println("Largest sum = "+ans.get(0));
-        System.out.print("Sub Array : [ ");
-        for(int i = 1; i < (ans.size())-1;i++)
+        if (n == 1)
         {
-            System.out.print(ans.get(i)+",");
+            System.out.println(arr[0]);
         }
-        System.out.print(ans.get((ans.size())-1)+" ]");
+        else
+        {
+            System.out.println(FindLargetSum(arr, n));
+        }
+        
     }
 
 }
+
+/*
+ * Output :
+ * Enter the number of elements : 
+    8
+    Enter the elements one by one : -1 -2 -5 0 4 5 6 -1  
+    15
+ */
