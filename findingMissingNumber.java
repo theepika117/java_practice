@@ -38,3 +38,17 @@ public class findingMissingNumber {
     }
     
 }
+
+
+
+
+
+
+/*
+ * OUTPUT
+ * Enter number of elements : 
+    3
+    Enter the numbers : 
+    3 0 1
+2
+ */

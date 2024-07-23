@@ -6,7 +6,7 @@ Given a string s, the task is to print all the possible permutations of the give
 package strings;
 import java.io.*;
 import java.util.Scanner;
-import java.util.scanner;
+
 
 public class permutations {
 
