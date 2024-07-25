@@ -54,6 +54,7 @@ public class singlyLinkedList {
         
     }
 
+    // method to insert node next to a specific node
     public void addNextTo(int data, int target)
     {
         Node newNode = new Node(data);
@@ -85,6 +86,53 @@ public class singlyLinkedList {
             current.next = current.next.next;
         }
         
+    }
+
+
+    //method to search a node
+    public void search(int value)
+    {
+        Node current = head;
+        boolean found = false;
+        while(current.next != null)
+        {
+            if(current.data == value)
+            {
+                System.out.println("Element found");
+                found = true;
+                break;
+            }
+            current = current.next;
+        }
+        if(!found)
+        {
+            if(current.data == value)
+            {
+                System.out.println("Element found");
+                found = true;
+            }
+            else
+            {
+                System.out.println("Element not found");
+            }
+        }
+    }
+
+
+    //method to find the length of the list
+    public int findLength()
+    {
+        Node current = head;
+        if(current == null)
+        {
+            return 0;
+        }
+        int len = 0;
+        while (current.next != null) {
+            len++;
+            current = current.next;
+        }
+        return len+1;
     }
 
 
