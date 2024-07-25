@@ -68,6 +68,9 @@ public class singlyLinkedList {
             newNode.next = current.next;
             current.next = newNode;
         }
+        else{
+            add(data);
+        }
 
 
     }
@@ -77,13 +80,19 @@ public class singlyLinkedList {
     public void delete(int data)
     {
         Node current = head;
+        Node prev = null ;
         while(current.next != null && current.next.data != data)
         {
+            prev = current;
             current = current.next;
         }
         if (current.next != null)
         {
             current.next = current.next.next;
+        }
+        else
+        {
+            prev.next = null;
         }
         
     }

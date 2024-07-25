@@ -17,6 +17,8 @@ public class MainSLL {
         list.add(9);
         list.printData();
         System.out.println(list.findLength());
+        list.delete(9);
+        list.printData();
     }
     
 }
@@ -30,4 +32,5 @@ public class MainSLL {
     Element not found
     4 5 7 8 9
     5
+    4 5 7 8
  */
